@@ -62,13 +62,15 @@ chmod +x 0install
 ```
 ### CREATE OWN 0install Module
 ```bash
+# Module Template
+
 function install_yourpackagename(){
   if command -v your_package_name &>/dev/null;
   then
   echo -e "$pl2 your_package_name $k1"
   else
   echo -e "$pl1 your_package_name $k2"
-  package_installationprocess #author_name:your_name
+    package_installation_process #author_name:your_name
 fi
 }
 
@@ -80,4 +82,5 @@ fi
 # wget --- short form of wget -q
 
 ```
+After creating module just create a issue and submit your module there we will add it soon
 
