@@ -53,10 +53,31 @@
 - [x] kxss
 - [x] dalfox
 
-installation 
+### installation 
 ```
 git clone https://github.com/Joyghoshs/0install
 cd 0install
 chmod +x 0install
 ./0install
 ```
+### CREATE OWN 0install Module
+```bash
+function install_yourpackagename(){
+  if command -v your_package_name &>/dev/null;
+  then
+  echo -e "$pl2 your_package_name $k1"
+  else
+  echo -e "$pl1 your_package_name $k2"
+  package_installationprocess #author_name:your_name
+fi
+}
+
+#Shortcut
+# apt package_name  --- to use apt to download and package
+# mv_bin ----- to move your package compiled binary to /bin
+# go_get github.com/user/repo ----- short form of go get -u 
+# get_latest github_user/repo ----- get package from any github repo relase page
+# wget --- short form of wget -q
+
+```
+
