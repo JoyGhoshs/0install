@@ -20,7 +20,7 @@ function banner() {
 # Installation
 #apt-installation
 function apt(){
-  sudo apt -qq -y install $1
+  sudo apt -qq install $1
 }
 #-------------------------
 #wget_downloader
@@ -193,6 +193,16 @@ function install_assetfinder(){
   cd go/bin
   mv_bin assetfinder
   cd
+fi
+}
+#install_jq
+function install_jq(){
+  if command -v jq &>/dev/null;
+  then
+  echo -e "$pl2 jq $k1"
+  else
+  echo -e "$pl1 jq $k2"
+  apt jq
 fi
 }
 #install_httprobe
@@ -470,6 +480,7 @@ fi
 banner
 install_go
 install_dig
+install_jq
 install_make
 install_gcc
 install_pip
