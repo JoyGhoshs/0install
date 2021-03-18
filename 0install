@@ -20,7 +20,7 @@ function banner() {
 # Installation
 #apt-installation
 function apt(){
-  sudo apt -qq install $1
+  sudo apt -qq -y install $1
 }
 #-------------------------
 #wget_downloader
