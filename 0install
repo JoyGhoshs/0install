@@ -457,11 +457,22 @@ function download_templates(){
       mv Gf-Patterns/*.json .gf
   fi
 }
+#install_pip3
+function install_pip(){
+  if command -v pip3 &>/dev/null;
+  then
+  echo -e "$pl2 pip3 $k1"
+  else
+  echo -e "$pl1 pip3 $k2"
+  apt python3-pip
+fi
+}
 banner
 install_go
 install_dig
 install_make
 install_gcc
+install_pip
 install_dnsx
 install_subfinder
 install_nuclei
