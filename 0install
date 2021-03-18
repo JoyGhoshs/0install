@@ -123,7 +123,7 @@ function install_dnsx(){
   else
   echo -e "$pl1 dnsx $k2"
   echo -e "$pl2 Detecting Architecture"
-  if [ $archc == a1 ]
+  if [ $archc == $a1 ]
   then
     echo -e "$pl2 Installing dnsx for $archc"
     get_latest projectdiscovery/dnsx linux_amd64
@@ -145,7 +145,7 @@ function install_subfinder(){
   else
   echo -e "$pl1 sunfinder $k2"
   echo -e "$pl Detecting Architecture"
-  if [ $archc == a1 ]
+  if [ $archc == $a1 ]
   then
     echo -e "$pl2 Installing subfinder for $archc"
     get_latest projectdiscovery/subfinder linux_amd64
@@ -167,7 +167,7 @@ function install_nuclei(){
   else
   echo -e "$pl1 nuclei $k2"
   echo -e "$pl Detecting Architecture"
-  if [ $archc == a1 ]
+  if [ $archc == $a1 ]
   then
     echo -e "$pl2 Installing nuclei for $archc"
     get_latest projectdiscovery/nuclei linux_amd64
@@ -273,7 +273,7 @@ function install_amass(){
   else
   echo -e "$pl1 amass $k2"
   echo -e "$pl Detecting Architecture"
-  if [ $archc == a1 ]
+  if [ $archc == $a1 ]
   then
     echo -e "$pl2 Installing amass for $archc"
     get_latest OWASP/Amass linux_amd64
@@ -423,7 +423,7 @@ function install_dalfox(){
   else
   echo -e "$pl1 dalfox $k2"
   echo -e "$pl Detecting Architecture"
-  if [ $archc == a1 ]
+  if [ $archc == $a1 ]
   then
     echo -e "$pl2 Installing dalfox for $archc"
     get_latest hahwul/dalfox linux_amd64
