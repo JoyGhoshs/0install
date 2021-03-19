@@ -493,7 +493,26 @@ function install_subjs(){
     echo -e "$pl2 Installing subjs for $archc"
     get_latest lc/subjs linux_386
     extract_tar
-    mv_bin dnsx
+    mv_bin subjs
+fi
+fi
+}
+#install_gau
+function install_gau(){
+  if command -v gau &>/dev/null;
+  then
+  echo -e "$pl2 gau $k1"
+  else
+  echo -e "$pl1 gau $k2"
+  echo -e "$pl2 Detecting Architecture"
+  if [ $archc == $a1 ]
+  then
+    echo -e "$pl2 Installing gau for $archc"
+    get_latest lc/gau linux_amd64
+    extract_tar
+    mv_bin gau
+  else
+    echo -e "$pl2 Gau is not avilable for $archc"
 fi
 fi
 }
@@ -557,4 +576,5 @@ install_dalfox
 install_otxurls
 install_subjs
 install_awscheck
+install_gau
 download_templates
