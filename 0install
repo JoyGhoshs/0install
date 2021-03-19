@@ -541,4 +541,5 @@ install_knockpy
 install_kxss
 install_dalfox
 install_otxurls
+install_subjs
 download_templates
