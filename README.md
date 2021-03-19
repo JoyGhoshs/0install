@@ -53,13 +53,11 @@
 - [x] kxss
 - [x] dalfox
 - [x] otxurls [NEW] 
+- [x] subjs [NEW] 
 
-### installation 
+### Usage without cloning this repo
 ```
-git clone https://github.com/Joyghoshs/0install
-cd 0install
-chmod +x 0install
-./0install
+curl -s https://raw.githubusercontent.com/JoyGhoshs/0install/main/0install | bash
 ```
 ### CREATE OWN 0install Module
 ```bash
