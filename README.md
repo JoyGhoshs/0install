@@ -54,6 +54,8 @@
 - [x] dalfox
 - [x] otxurls [NEW] 
 - [x] subjs [NEW] 
+- [x] Gau [NEW]
+- [x] Dirsearch [NEW]   
 
 ### Usage without cloning this repo
 ```
