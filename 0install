@@ -556,4 +556,5 @@ install_kxss
 install_dalfox
 install_otxurls
 install_subjs
+install_awscheck
 download_templates
