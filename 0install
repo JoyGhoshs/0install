@@ -447,6 +447,20 @@ function install_dalfox(){
 fi
 fi
 }
+#install_otxurls
+function install_otxurls(){
+  if command -v otxurls &>/dev/null;
+  then
+  echo -e "$pl2 otxurls $k1"
+  else
+  echo -e "$pl1 otxurls $k2"
+  go_get github.com/lc/otxurls
+  cd
+  cd go/bin
+  mv_bin otxurls
+  cd
+fi
+}
 #download_gf_patterns_nuclei_templates
 function download_templates(){
   cd
@@ -504,4 +518,5 @@ install_hakrawler
 install_knockpy
 install_kxss
 install_dalfox
+install_otxurls
 download_templates
