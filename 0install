@@ -536,6 +536,21 @@ function download_templates(){
       mv Gf-Patterns/*.json .gf
   fi
 }
+#install_dirsearch
+function install_dirsearch(){
+  cd /opt
+  if [ -d "dirsearch" ]
+  then
+      echo -e "$pl2 dirsearch is installed"
+  else
+      echo -e "$pl1 dirsearch is not installed installing"
+      git clone https://github.com/maurosoria/dirsearch
+      cd
+      sudo echo "alias dirsearch = "python3 /opt/dirsearch/dirsearch.py" >> .bashrc
+      sudo echo "alias dirsearch = "python3 /opt/dirsearch/dirsearch.py" >> .zshrc
+      echo "$pl Now You can Execute Dirsearch using dirsearch command"
+  fi
+}
 #install_pip3
 function install_pip(){
   if command -v pip3 &>/dev/null;
@@ -577,4 +592,5 @@ install_otxurls
 install_subjs
 install_awscheck
 install_gau
+install_dirsearch
 download_templates
