@@ -52,6 +52,7 @@
 - [x] knockpy
 - [x] kxss
 - [x] dalfox
+- [x] otxurls [NEW] 
 
 ### installation 
 ```
