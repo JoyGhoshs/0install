@@ -461,6 +461,20 @@ function install_otxurls(){
   cd
 fi
 }
+#install_awscheck
+function install_awscheck(){
+  if command -v awscheck &>/dev/null;
+  then
+  echo -e "$pl2 awscheck $k1"
+  else
+  echo -e "$pl1 awscheck $k2"
+  go_get github.com/lc/hacks/awscheck
+  cd
+  cd go/bin
+  mv_bin awscheck
+  cd
+fi
+}
 #install_subjs
 function install_subjs(){
   if command -v subjs &>/dev/null;
