@@ -552,9 +552,11 @@ function install_dirsearch(){
       echo -e "$pl Now You can Execute Dirsearch using dirsearch command"
   fi
 }
+exit
 #install_corsy
 function install_dirsearch(){
   cd /opt
+  sudo su
   if [ -d "Corsy" ]
   then
       echo -e "$pl2 Corsy is installed"
@@ -567,6 +569,7 @@ function install_dirsearch(){
       echo -e "$pl Now You can Execute Corsy using corsy command"
   fi
 }
+exit
 #install_pip3
 function install_pip(){
   if command -v pip3 &>/dev/null;
