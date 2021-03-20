@@ -544,7 +544,7 @@ function install_dirsearch(){
       echo -e "$pl2 dirsearch is installed"
   else
       echo -e "$pl1 dirsearch is not installed installing"
-      git clone https://github.com/maurosoria/dirsearch
+      sudo git clone https://github.com/maurosoria/dirsearch
       cd
       sudo echo "alias dirsearch = "python3 /opt/dirsearch/dirsearch.py" >> .bashrc
       sudo echo "alias dirsearch = "python3 /opt/dirsearch/dirsearch.py" >> .zshrc
@@ -559,7 +559,7 @@ function install_dirsearch(){
       echo -e "$pl2 Corsy is installed"
   else
       echo -e "$pl1 Corsy is not installed installing"
-      git clone https://github.com/s0md3v/Corsy
+      sudo git clone https://github.com/s0md3v/Corsy
       cd
       sudo echo "alias corsy = "python3 /opt/Corsy/corsy.py" >> .bashrc
       sudo echo "alias corsy = "python3 /opt/Corsy/corsy.py" >> .zshrc
