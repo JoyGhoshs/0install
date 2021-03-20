@@ -539,6 +539,7 @@ function download_templates(){
 #install_dirsearch
 function install_dirsearch(){
   cd /opt
+  sudo su
   if [ -d "dirsearch" ]
   then
       echo -e "$pl2 dirsearch is installed"
@@ -554,6 +555,7 @@ function install_dirsearch(){
 #install_corsy
 function install_dirsearch(){
   cd /opt
+  sudo su
   if [ -d "Corsy" ]
   then
       echo -e "$pl2 Corsy is installed"
