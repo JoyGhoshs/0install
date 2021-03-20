@@ -549,13 +549,12 @@ function install_dirsearch(){
       cd
       sudo echo "alias dirsearch = "python3 /opt/dirsearch/dirsearch.py" >> .bashrc
       sudo echo "alias dirsearch = "python3 /opt/dirsearch/dirsearch.py" >> .zshrc
-      echo "$pl Now You can Execute Dirsearch using dirsearch command"
+      echo -e "$pl Now You can Execute Dirsearch using dirsearch command"
   fi
 }
 #install_corsy
 function install_dirsearch(){
   cd /opt
-  sudo su
   if [ -d "Corsy" ]
   then
       echo -e "$pl2 Corsy is installed"
@@ -565,7 +564,7 @@ function install_dirsearch(){
       cd
       sudo echo "alias corsy = "python3 /opt/Corsy/corsy.py" >> .bashrc
       sudo echo "alias corsy = "python3 /opt/Corsy/corsy.py" >> .zshrc
-      echo "$pl Now You can Execute Corsy using corsy command"
+      echo -e "$pl Now You can Execute Corsy using corsy command"
   fi
 }
 #install_pip3
