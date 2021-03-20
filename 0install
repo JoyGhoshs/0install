@@ -551,6 +551,21 @@ function install_dirsearch(){
       echo "$pl Now You can Execute Dirsearch using dirsearch command"
   fi
 }
+#install_corsy
+function install_dirsearch(){
+  cd /opt
+  if [ -d "Corsy" ]
+  then
+      echo -e "$pl2 Corsy is installed"
+  else
+      echo -e "$pl1 Corsy is not installed installing"
+      git clone https://github.com/s0md3v/Corsy
+      cd
+      sudo echo "alias corsy = "python3 /opt/Corsy/corsy.py" >> .bashrc
+      sudo echo "alias corsy = "python3 /opt/Corsy/corsy.py" >> .zshrc
+      echo "$pl Now You can Execute Corsy using corsy command"
+  fi
+}
 #install_pip3
 function install_pip(){
   if command -v pip3 &>/dev/null;
