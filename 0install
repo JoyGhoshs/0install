@@ -592,5 +592,4 @@ install_otxurls
 install_subjs
 install_awscheck
 install_gau
-install_dirsearch
 download_templates
