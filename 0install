@@ -536,19 +536,19 @@ function download_templates(){
       mv Gf-Patterns/*.json .gf
   fi
 }
-#install_dirsearch
-function install_dirsearch(){
+#install_corsy
+function install_corsy(){
   cd /opt
-  if [ -d "dirsearch" ]
+  if [ -d "Corsy" ]
   then
-      echo -e "$pl2 dirsearch is installed"
+      echo -e "$pl2 Corsy is installed"
   else
-      echo -e "$pl1 dirsearch is not installed installing"
-      sudo git clone https://github.com/maurosoria/dirsearch
+      echo -e "$pl1 Corsy is not installed installing"
+      sudo git clone https://github.com/s0md3v/Corsy
       cd
-      sudo echo "alias dirsearch = "python3 /opt/dirsearch/dirsearch.py" >> .bashrc
-      sudo echo "alias dirsearch = "python3 /opt/dirsearch/dirsearch.py" >> .zshrc
-      echo -e "$pl Now You can Execute Dirsearch using dirsearch command"
+      sudo echo 'alias corsy = "python3 /opt/Corsy/corsy.py' >> .bashrc
+      sudo echo 'alias corsy = "python3 /opt/Corsy/corsy.py' >> .zshrc
+      echo -e "$pl Now You can Execute Corsy using corsy command"
   fi
 }
 #install_pip3
@@ -592,4 +592,5 @@ install_otxurls
 install_subjs
 install_awscheck
 install_gau
+install_corsy
 download_templates
