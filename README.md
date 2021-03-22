@@ -55,6 +55,7 @@
 - [x] otxurls [NEW] 
 - [x] subjs [NEW] 
 - [x] Gau [NEW]
+- [x] Corsy [NEW] 
 
 ### Usage without cloning this repo
 ```
