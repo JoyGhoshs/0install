@@ -1,5 +1,5 @@
 #!/bin/bash
-#-JUNKPROJECT-JoyGhosh
+#Update 2021-AUG-09
 #VAIRABLES
 pl1="[\033[31m⌛\033[0m]"
 pl="[\033[31m♾️\033[0m]"
@@ -14,13 +14,13 @@ pwd=$(pwd)
 function banner() {
   echo -e """
   \033[31m█▀█\033[0m ▄▄ █ █▄░█ █▀ ▀█▀ ▄▀█ █░░ █░░ █▀▀ █▀█
-  \033[31m█▄█\033[0m ░░ █ █░▀█ ▄█ ░█░ █▀█ █▄▄ █▄▄ ██▄ █▀▄ [1.0] [0xJoyGhosh]
+  \033[31m█▄█\033[0m ░░ █ █░▀█ ▄█ ░█░ █▀█ █▄▄ █▄▄ ██▄ █▀▄ [1.1] [0xJoyGhosh]
   """
 }
 # Installation
 #apt-installation
 function apt(){
-  sudo apt -qq install $1
+  sudo apt -qq -y install $1
 }
 #-------------------------
 #wget_downloader
@@ -551,6 +551,28 @@ function install_corsy(){
       echo -e "$pl Now You can Execute Corsy using corsy command"
   fi
 }
+#install_arjun
+function install_arjun(){
+  if command -v arjun &>/dev/null;
+   then
+   echo -e "$pl2 arjun $k1"
+   else
+   echo -e "$pl1 arjun $k2"
+   pip3 install arjun
+ fi
+}
+#install_gowitness
+function install_gowitness(){
+  if command -v gowitness &>/dev/null;
+   then
+   echo -e "$pl2 gowitness $k1"
+   else
+   echo -e "$pl1 gowitness $k2"
+   wget https://github.com/sensepost/gowitness/releases/download/2.3.6/gowitness-2.3.6-linux-amd64
+   mv gowitness-2.3.6-linux-amd64 gowitness
+   mv gowitness /bin
+ fi
+}
 #install_pip3
 function install_pip(){
   if command -v pip3 &>/dev/null;
@@ -583,6 +605,7 @@ install_shodan
 install_censys
 install_goaltdns
 install_subjack
+install_httprobe
 install_ffuf
 install_hakrawler
 install_knockpy
@@ -593,4 +616,6 @@ install_subjs
 install_awscheck
 install_gau
 install_corsy
+install_arjun
+install_gowitness
 download_templates
