@@ -57,6 +57,7 @@
 - [x] subjs [NEW] 
 - [x] Gau [NEW]
 - [x] Corsy [NEW] 
+- [x] gowitness [NEW] 
 
 ### Usage without cloning this repo
 ```
