@@ -39,6 +39,7 @@
 - [x] wayback
 - [x] meg
 - [x] gf
+- [x] httprobe 
 - [x] gron
 - [x] amass
 - [x] webscreenshot
