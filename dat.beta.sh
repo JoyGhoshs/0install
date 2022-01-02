@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 #---------------
 warning="[- \033[31mWARNING\033[0m -]"
 info="[- \033[1;33minfo\033[0m -]"
