@@ -21,6 +21,43 @@ function banner(){
 \033[0m
     """
 }
+function tool_config(){
+    echo -ne "[- \033[1;32mCommon Software Properties\033[0m -]\r"
+    sudo apt install software-properties-common -y -qq &>/dev/null
+    echo -ne "[- \033[1;32mAdding Latest Golang repo\033[0m -]\r"
+    sudo add-apt-repository ppa:longsleep/golang-backports -y &>/dev/null
+    echo -ne "[- \033[1;32mUpdating System\033[0m -]\r"
+    sudo apt update -y -qq &>/dev/null
+    echo -ne "[- \033[1;32mInstalling git\033[0m -]\r"
+    sudo apt install git -y -qq &>/dev/null
+    echo -ne "[- \033[1;32mInstalling 7zip\033[0m -]\r"
+    sudo apt install --assume-yes p7zip-full &>/dev/null
+    echo -ne "[- \033[1;32mInstalling curl\033[0m -]\r"
+    sudo apt install curl -y -qq &>/dev/null
+    echo -ne "[- \033[1;32mInstalling wget\033[0m -]\r"
+    sudo apt install wget -y -qq &>/dev/null
+    echo -ne "[- \033[1;32mInstalling python3\033[0m -]\r"
+    sudo apt install python3 -y -qq &>/dev/null
+    echo -ne "[- \033[1;32mInstalling pip3\033[0m -]\r"
+    sudo apt install python3-pip -y -qq &>/dev/null
+    echo -ne "[- \033[1;32mInstalling dig\033[0m -]\r"
+    sudo apt install dig -y -qq &>/dev/null
+    echo -ne "[- \033[1;32mInstalling host \033[0m -]\r"
+    sudo apt install host -y -qq &>/dev/null
+    echo -ne "[- \033[1;32mInstalling make\033[0m -]\r"
+    sudo apt install make -y -qq &>/dev/null
+    echo -ne "[- \033[1;32mInstalling git\033[0m -]\r"
+    sudo apt install git -y -qq &>/dev/null
+    echo -ne "[- \033[1;32mInstalling gcc -]\r"
+    sudo apt install gcc -y -qq &>/dev/null
+    echo -ne "[- \033[1;32mInstalling jq\033[0m -]\r"
+    sudo apt install jq -y -qq &>/dev/null
+    echo -ne "[- \033[1;32mInstalling libdns\033[0m -]\r"
+    sudo apt-get install libldns-dev -y -qq &>/dev/null
+    echo -ne "[- \033[1;32mInstalling NPM-NODEJS\033[0m -]\r"
+    sudo apt-get install npm -y -qq &>/dev/null
+    sudo apt-get install nodejs -y -qq &>/dev/null
+}
 function installer(){
     pkg=$1
     proc=$2
@@ -540,7 +577,8 @@ function xss2png_latest(){
     sudo mv xss2png /bin
     echo -ne $don
 }
-
+banner
+tool_config
 installer go go_latest
 installer dnsx dnsx_latest
 installer assetfinder assetsfinder_latest
