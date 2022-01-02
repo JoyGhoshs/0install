@@ -21,6 +21,18 @@ function banner(){
 \033[0m
     """
 }
+function installer(){
+    pkg=$1
+    proc=$2
+    if command -v $pkg >/dev/null 2>&1; then
+        echo -e "$info  \033[31m*\033[0m[ $pkg is Already Installed ]\033[31m*\033[0m"
+    else
+        echo -ne "$warning  \033[31m*\033[0m[ $pkg is Not Installed (Installing..) ]\033[31m*\033[0m\n"
+        $proc
+        echo -ne "$success  \033[31m*\033[0m[ $pkg is Installed Successfully ]\033[31m*\033[0m\n"
+    fi
+
+}
 function tool_config(){
     echo -ne "[- \033[1;32mCommon Software Properties\033[0m -]\r"
     sudo apt install software-properties-common -y -qq &>/dev/null
@@ -57,63 +69,6 @@ function tool_config(){
     echo -ne "[- \033[1;32mInstalling NPM-NODEJS\033[0m -]\r"
     sudo apt-get install npm -y -qq &>/dev/null
     sudo apt-get install nodejs -y -qq &>/dev/null
-}
-function installer(){
-    pkg=$1
-    proc=$2
-    if command -v $pkg >/dev/null 2>&1; then
-        echo -e "$info  \033[31m*\033[0m[ $pkg is Already Installed ]\033[31m*\033[0m"
-    else
-        echo -ne "$warning  \033[31m*\033[0m[ $pkg is Not Installed (Installing..) ]\033[31m*\033[0m\n"
-        $proc
-        echo -ne "$success  \033[31m*\033[0m[ $pkg is Installed Successfully ]\033[31m*\033[0m\n"
-    fi
-
-}
-function enviroment_config(){
-    echo -ne "[- \033[1;32mInstalling Required Configuration\033[0m -]\r"
-    echo -ne "[- \033[1;32mCommon Software Properties\033[0m -]\r"
-    sudo apt install software-properties-common -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mAdding Latest Golang repo\033[0m -]\r"
-    sudo add-apt-repository ppa:longsleep/golang-backports -y &>/dev/null
-    echo -ne "[- \033[1;32mUpdating System\033[0m -]\r"
-    sudo apt update -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling git\033[0m -]\r"
-    sudo apt install git -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling 7zip\033[0m -]\r"
-    sudo apt install --assume-yes p7zip-full &>/dev/null
-    echo -ne "[- \033[1;32mInstalling curl\033[0m -]\r"
-    sudo apt install curl -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling wget\033[0m -]\r"
-    sudo apt install wget -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling python3\033[0m -]\r"
-    sudo apt install python3 -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling pip3\033[0m -]\r"
-    sudo apt install python3-pip -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling docker\033[0m -]\r"
-    sudo apt install docker.io -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling docker-compose\033[0m -]\r"
-    sudo apt install docker-compose -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling runc\033[0m -]\r"
-    sudo apt install runc -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling dig\033[0m -]\r"
-    sudo apt install dig -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling host \033[0m -]\r"
-    sudo apt install host -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling make\033[0m -]\r"
-    sudo apt install make -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling git\033[0m -]\r"
-    sudo apt install git -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling gcc -]\r"
-    sudo apt install gcc -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling jq\033[0m -]\r"
-    sudo apt install jq -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling libdns\033[0m -]\r"
-    sudo apt-get install libldns-dev -y -qq &>/dev/null
-    echo -ne "[- \033[1;32mInstalling NPM-NODEJS\033[0m -]\r"
-    sudo apt-get install npm -y -qq &>/dev/null
-    sudo apt-get install nodejs -y -qq &>/dev/null
-
 }
 function git_installation(){
     mkdir .tm;cd .tm
@@ -171,9 +126,9 @@ function sublis3r_latest(){
 function amass_latest_linux(){
     if [ $ark == "x86_64" ]
     then 
-    git_installation "OWASP/Amass" "linux_amd64" "amass"
+    git_installation "OWASP/Amass" "linux_amd64" "amass_linux_amd64/amass"
     else
-    git_installation "OWASP/Amass" "linux_386" "amass"
+    git_installation "OWASP/Amass" "linux_386" "amass_linux_amd64/amass"
     fi
 }
 function amass_latest_kali(){
@@ -244,12 +199,14 @@ function rustscan_latest(){
     echo -ne $downloading
     wget -P .0install/ $(curl -sL https://api.github.com/repos/RustScan/RustScan/releases/latest | jq -r '.assets[].browser_download_url' | grep "amd64") &>/dev/null
     sudo dpkg -i .0install/*.deb
+    sudo apt install -f
     rm -rf .0install
     echo -ne $don
     else
     echo -ne $downloading
     wget -P .0install/ $(curl -sL https://api.github.com/repos/RustScan/RustScan/releases/latest | jq -r '.assets[].browser_download_url' | grep "i386") &>/dev/null
     sudo dpkg -i .0install/*.deb
+    sudo apt install -f
     rm -rf .0install
     echo -ne $don
     fi
@@ -274,7 +231,7 @@ function gowitness_latest(){
     if [ $ark == "x86_64" ]
     then
     echo -ne $downloading
-    wget $(curl -sL https://api.github.com/repos/sensepost/gowitness/releases/latest | jq -r '.assets[].browser_download_url' | grep "amd64") &>/dev/null
+    wget $(curl -sL https://api.github.com/repos/sensepost/gowitness/releases/latest | jq -r '.assets[].browser_download_url' | grep "linux-amd64") &>/dev/null
     echo -ne $mv_bin
     chmod +x gowitness-*-linux-amd64
     sudo mv gowitness-*-linux-amd64 /bin/gowitness
@@ -518,7 +475,7 @@ function gopherus_latest(){
     echo -ne $don
 }
 function sqlmap_latest(){
-    sudo pip3 install sqlmap
+    sudo pip3 install sqlmap &>/dev/null
 }
 function anew_latest(){
     go_get github.com/tomnomnom/anew
@@ -577,7 +534,6 @@ function xss2png_latest(){
     sudo mv xss2png /bin
     echo -ne $don
 }
-banner
 tool_config
 installer go go_latest
 installer dnsx dnsx_latest
@@ -634,5 +590,3 @@ installer httpx httpx_latest
 installer httprobe httprobe_latest
 installer dalfox dalfox_latest
 installer xss2png xss2png_latest
-
-
