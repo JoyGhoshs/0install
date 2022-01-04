@@ -1,15 +1,18 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/JoyGhoshs/0install"><img src="https://i.ibb.co/sb1chvb/Screenshot-from-2021-03-18-02-41-09.png" alt="0installer"></a>
+  <a href="https://github.com/JoyGhoshs/0install"><img src="https://imgur.com/uUR2tjR.png" alt="0installer"></a>
   <br>
     Zero-Install
   <br>
 </h1>
 
-<h4 align="center">Automated Recon Tool Installer</h4>
+<h4 align="center">BugHunt Tools Installer</h4>
     <p align="center">
   <a href="https://github.com/joyghoshs/0install">
     <img src="https://img.shields.io/static/v1?label=Project&message=ZeroInstall&color=green">
+  </a>
+    <a href="https://github.com/joyghoshs/0install">
+    <img src="https://img.shields.io/static/v1?label=Update&message=V2.0&color=green">
   </a>
   <a href="https://twitter.com/0xjoyghosh">
       <img src="https://img.shields.io/twitter/follow/0xjoyghosh?style=social">
@@ -17,7 +20,7 @@
 </p>
 <h1 align="center">
   <br>
-  <a href="https://github.com/JoyGhoshs/0install"><img src="https://i.ibb.co/R7GyxxD/Screenshot-from-2021-03-18-03-07-47.png" alt="0installer"></a>
+  <a href="https://github.com/JoyGhoshs/0install"><img src="https://imgur.com/lc17lii.png" alt="0installer"></a>
   <br>
   <br>
 </h1>
@@ -31,59 +34,12 @@
 - It Download all the package from real source
 - It doesnt use apt to install tools so tools can be downloaded and installed in any distro
 
-### Tools it can install
-- [x] dnsx
-- [x] subfinder
-- [x] nuclei
-- [x] assetfinder
-- [x] wayback
-- [x] meg
-- [x] gf
-- [x] httprobe 
-- [x] gron
-- [x] amass
-- [x] webscreenshot
-- [x] waybackunifier
-- [x] shodan
-- [x] censys
-- [x] goaltdns
-- [x] subjack
-- [x] ffuf
-- [x] hakrawler
-- [x] knockpy
-- [x] kxss
-- [x] dalfox
-- [x] otxurls [NEW] 
-- [x] subjs [NEW] 
-- [x] Gau [NEW]
-- [x] Corsy [NEW] 
-- [x] gowitness [NEW] 
+### Tools List
+<a href="https://github.com/JoyGhoshs/0install"><img src="https://imgur.com/4sCZcpA.png" alt="0installer"></a>
 
-### Usage without cloning this repo
-```
-curl -s https://raw.githubusercontent.com/JoyGhoshs/0install/main/0install | bash
-```
-### CREATE OWN 0install Module
-```bash
-# Module Template
+### Usage
+<h1 align="center">
+<a href="https://github.com/JoyGhoshs/0install"><img src="https://media4.giphy.com/media/AR6M3aWU93iR3mGLLi/giphy.gif?cid=790b76110e4a60dd73b65f8919e11a00a13717efea3cfa55&rid=giphy.gif&ct=g" alt="0installer"></a></h1>
 
-function install_yourpackagename(){
-  if command -v your_package_name &>/dev/null;
-  then
-  echo -e "$pl2 your_package_name $k1"
-  else
-  echo -e "$pl1 your_package_name $k2"
-    package_installation_process #author_name:your_name
-fi
-}
 
-#Shortcut
-# apt package_name  --- to use apt to download and package
-# mv_bin ----- to move your package compiled binary to /bin
-# go_get github.com/user/repo ----- short form of go get -u 
-# get_latest github_user/repo ----- get package from any github repo relase page
-# wget --- short form of wget -q
-
-```
-After creating module just create a issue and submit your module there we will add it soon
 
