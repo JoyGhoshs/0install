@@ -24,5 +24,18 @@
         "gauplus":"go install github.com/bp0lr/gauplus@latest &> /dev/null",
         "puredns":"go install github.com/d3mondev/puredns/v2@latest &> /dev/null",
         "gospider":"go get -u github.com/jaeles-project/gospider &> /dev/null",
-        "gowitness":"go get -u github.com/sensepost/gowitness &> /dev/null"
+        "gowitness":"go get -u github.com/sensepost/gowitness &> /dev/null",
+        "massdns":"git clone https://github.com/blechschmidt/massdns.git;cd massdns;sudo make;mv bin/massdns /bin;cd ..;rm -rf massdns",
+        "padbuster":"https://raw.githubusercontent.com/AonCyberLabs/PadBuster/master/padBuster.pl;chmod +x padBuster.pl;mv padBuster.pl /bin/padbuster",
+        "dirsearch":"sudo pip3 install git+https://github.com/maurosoria/dirsearch &> /dev/null",
+        "findomain":"sudo wget https://github.com/findomain/findomain/releases/latest/download/findomain-linux -O /bin/findomain;chmod +x /bin/findomain",
+        "aquatone":"bin_from_git michenriksen/aquatone &> /dev/null",
+        "ffuf":"git clone https://github.com/ffuf/ffuf ; cd ffuf ; go get ; go build ; mv ffuf /bin/ffuf; cd ..; rm -rf ffuf",
+        "linkfinder":"sudo pip3 install git+https://github.com/GerbenJavado/LinkFinder &> /dev/null",
+        "masscan":"git clone https://github.com/robertdavidgraham/masscan > /dev/null 2>&1 && cd masscan && make > /dev/null 2>&1 && make install > /dev/null 2>&1 && mv bin/masscan /usr/local/bin/; cd ..; rm -rf masscan",
+        "github-subdomains:"go get -u github.com/gwen001/github-subdomains &> /dev/null",
+        "dnsgen":"sudo pip3 install git+https://github.com/ProjectAnte/dnsgen &> /dev/null",
+        "unew":"go get -u github.com/dwisiswant0/unew &> /dev/null",
+        "crlfuzz":"curl -sSfL https://git.io/crlfuzz | sh -s -- -b /usr/local/bin",
+        "go-dork":"go install dw1.io/go-dork@latest &> /dev/null"
     }
