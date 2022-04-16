@@ -33,7 +33,7 @@
         "ffuf":"git clone https://github.com/ffuf/ffuf ; cd ffuf ; go get ; go build ; mv ffuf /bin/ffuf; cd ..; rm -rf ffuf",
         "linkfinder":"sudo pip3 install git+https://github.com/GerbenJavado/LinkFinder &> /dev/null",
         "masscan":"git clone https://github.com/robertdavidgraham/masscan > /dev/null 2>&1 && cd masscan && make > /dev/null 2>&1 && make install > /dev/null 2>&1 && mv bin/masscan /usr/local/bin/; cd ..; rm -rf masscan",
-        "github-subdomains:"go get -u github.com/gwen001/github-subdomains &> /dev/null",
+        "github-subdomains":"go get -u github.com/gwen001/github-subdomains &> /dev/null",
         "dnsgen":"sudo pip3 install git+https://github.com/ProjectAnte/dnsgen &> /dev/null",
         "unew":"go get -u github.com/dwisiswant0/unew &> /dev/null",
         "crlfuzz":"curl -sSfL https://git.io/crlfuzz | sh -s -- -b /usr/local/bin",
