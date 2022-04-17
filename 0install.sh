@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+
 
 echo -e '''
   ___  _          __       ____
