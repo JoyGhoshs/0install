@@ -5,7 +5,7 @@ echo -e '''
  / _ \(_)__  ___ / /____ _/ / /
 / // / / _ \(_-</ __/ _ `/ / / 
 \___/_/_//_/___/\__/\_,_/_/_/  
-                  by @0xjoyghosh
+                  by @0xjoyghosh [Community Edition]
                                
 '''
 
