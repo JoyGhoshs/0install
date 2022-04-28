@@ -35,39 +35,23 @@ function installer(){
 
 }
 function tool_config(){
-    echo -ne "[\033[1;32m||                                \033[1;0m]"
+    echo -e " [ Installing Requirements ]"
     sudo apt install software-properties-common -y -qq &>/dev/null
-    echo -ne "[\033[1;32m||||                              \033[1;0m]"
     sudo add-apt-repository ppa:longsleep/golang-backports -y &>/dev/null
-    echo -ne "[\033[1;32m||||||                            \033[1;0m]"
     sudo apt update -y -qq &>/dev/null
-    echo -ne "[\033[1;32m||||||||                          \033[1;0m]"
     sudo apt install git -y -qq &>/dev/null
-    echo -ne "[\033[1;32m||||||||||                        \033[1;0m]"
     sudo apt install --assume-yes p7zip-full &>/dev/null
-    echo -ne "[\033[1;32m||||||||||||                      \033[1;0m]"
     sudo apt install curl -y -qq &>/dev/null
-    echo -ne "[\033[1;32m||||||||||||||                    \033[1;0m]"
     sudo apt install wget -y -qq &>/dev/null
-    echo -ne "[\033[1;32m||||||||||||||||                  \033[1;0m]"
     sudo apt install python3 -y -qq &>/dev/null
-    echo -ne "[\033[1;32m||||||||||||||||||                \033[1;0m]"
     sudo apt install python3-pip -y -qq &>/dev/null
-    echo -ne "[\033[1;32m||||||||||||||||||||               \033[1;0m]"
     sudo apt install dig -y -qq &>/dev/null
-    echo -ne "[\033[1;32m||||||||||||||||||||||             \033[1;0m]"
     sudo apt install host -y -qq &>/dev/null
-    echo -ne "[\033[1;32m||||||||||||||||||||||||           \033[1;0m]"
     sudo apt install make -y -qq &>/dev/null
-    echo -ne "[\033[1;32m||||||||||||||||||||||||||         \033[1;0m]"
     sudo apt install git -y -qq &>/dev/null
-    echo -ne "[\033[1;32m||||||||||||||||||||||||||||       \033[1;0m]"
     sudo apt install gcc -y -qq &>/dev/null
-    echo -ne "[\033[1;32m||||||||||||||||||||||||||||||     \033[1;0m]"
     sudo apt install jq -y -qq &>/dev/null
-    echo -ne "[\033[1;32m||||||||||||||||||||||||||||||||   \033[1;0m]"
     sudo apt-get install libldns-dev -y -qq &>/dev/null
-    echo -ne "[\033[1;32m|||||||||||||||||||||||||||||||||||\033[1;0m]"
     touch $HOME/.0install_config
 
 }
