@@ -103,7 +103,8 @@ function dnsx_latest(){
 }
 function assetsfinder_latest(){
    echo -ne $downloading
-  go_get github.com/tomnomnom/assetfinder
+  go install github.com/tomnomnom/assetfinder@latest
+    mv /root/go/bin/assetfinder /bin
 }
 function sublist3r_latest(){
     sudo pip3 install git+https://github.com/aboul3la/Sublist3r &>/dev/null
@@ -140,7 +141,7 @@ function massdns_latest_kali(){
     echo -ne $don
 }
 function puredns_latest(){
-    go_get github.com/d3mondev/puredns/v2
+
 
 }
 function subfinder_latest_linux(){
@@ -193,7 +194,8 @@ function aquatone_latest(){
     fi
 }
 function subjack_latest(){
-    go_get github.com/haccer/subjack 
+    go install github.com/haccer/subjack@latest
+    mv /root/go/bin/subjack /bin
 }
 function gowitness_latest(){
     if [ $ark == "x86_64" ]
@@ -257,12 +259,14 @@ function dirsearch_latest(){
     echo -ne $don
 }
 function recursebuster_latest(){
-    go_get github.com/c-sto/recursebuster
+    go install github.com/c-sto/recursebuster@latest
+    mv /root/go/bin/recursebuster /bin
 
 
 }
 function gospider_latest(){
-    go_get github.com/jaeles-project/gospider
+    go install github.com/jaeles-project/gospider@latest
+    mv /root/go/bin/gospider /bin
 
 }
 function hakrawler_latest(){
@@ -274,7 +278,8 @@ function hakrawler_latest(){
     echo -ne $don
 }
 function getjs_latest(){
-    go_get github.com/003random/getJS
+    go install github.com/003random/getJS@latest
+    mv /root/go/bin/getJS /bin
 }
 function gau_latest(){
     if [ $ark == "x86_64" ]
@@ -285,7 +290,8 @@ function gau_latest(){
     fi
 }
 function waybackurls_latest(){
-    go_get github.com/tomnomnom/waybackurls
+    go install github.com/tomnomnom/waybackurls@latest
+    mv /root/go/bin/waybackurls /bin
 }
 function urlgrab_latest(){
     echo -ne $downloading
@@ -311,10 +317,13 @@ function wfuzz_latest(){
 
 }
 function ffuf_latest(){
-    go_get github.com/ffuf/ffuf
+    go install github.com/ffuf/ffuf@latest
+    mv /root/go/bin/ffuf /bin
+
 }
 function qsfuzz_latest(){
-    go_get github.com/ameenmaali/qsfuzz
+    go install github.com/ameenmaali/qsfuzz@latest
+    mv /root/go/bin/qsfuzz /bin
 }
 function corsy_latest(){
     echo -ne $downloading
@@ -442,7 +451,8 @@ function sqlmap_latest(){
     sudo pip3 install sqlmap &>/dev/null
 }
 function anew_latest(){
-    go_get github.com/tomnomnom/anew
+    go install github.com/tomnomnom/anew@latest
+       mv /root/go/bin/anew /bin
 }
 function githubsubdomains_latest(){
     go_get github.com/gwen001/github-subdomains
@@ -529,16 +539,20 @@ function jwtcrack_latest(){
     echo -ne $don
 }
 function jwt-hack_latest(){
-    go_get github.com/hahwul/jwt-hack
+    go install github.com/hahwul/jwt-hack@latest
+    mv /root/go/bin/jwt-hack /bin 
 }
 function SubOver_latest(){
     go_get_install github.com/Ice3man543/SubOver@latest
+    mv /root/go/bin/SubOver /bin 
 }
 function crobat_latest(){
-    go_get github.com/cgboal/sonarsearch/cmd/crobat
+    go install github.com/cgboal/sonarsearch/cmd/crobat@latest
+    mv /root/go/bin/crobat /bin
 }
 function cnames_latest(){
-    go_get github.com/cybercdh/cnames
+    go install  github.com/cybercdh/cnames@latest
+    mv /root/go/bin/cnames /bin
 }
 function nuclei_latest(){
         if [ $ark == "x86_64" ]
@@ -549,7 +563,8 @@ function nuclei_latest(){
     fi 
 }
 function jaeles_latest(){
-    go_get github.com/jaeles-project/jaeles
+   go install github.com/jaeles-project/jaeles@latest
+   mv /root/go/bin/jaeles /bin
 }
 function wapiti_latest(){
     echo -ne $downloading
@@ -573,19 +588,24 @@ function gf_latest(){
   fi
 }
 function otxurls_latest(){
-    go_get github.com/lc/otxurls
+    go install github.com/lc/otxurls@latest
+    mv /root/go/bin/otxurls /bin
 }
 function subzy_latest(){
-    go_get github.com/lukasikic/subzy
+    go install github.com/lukasikic/subzy@latest
+    mv /root/go/bin/otxurls /bin
 }
 function kxss_latest(){
-    go_get github.com/joyghoshs/kxss
+    go install github.com/Emoe/kxss@latest
+    mv /root/go/bin/kxss /bin 
 }
 function subjs_latest(){
-    go_get github.com/lc/subjs
+    go install github.com/lc/subjs@latest
+    mv /root/go/bin/subjs /bin 
 }
 function gron_latest(){
-    go_get github.com/tomnomnom/gron
+    go install github.com/tomnomnom/gron@latest
+    mv /root/go/bin/gron /bin 
 }
 function paramspider_latest(){
     echo -ne $downloading
@@ -598,7 +618,8 @@ function paramspider_latest(){
     echo -ne $don
 }
 function meg_latest(){
-    go_get github.com/tomnomnom/meg
+    go install github.com/tomnomnom/meg@latest
+    mv /root/go/bin/meg /bin 
 }
 function options(){
     if [ $1 == "top-bughunt-tools" ]
